@@ -3,7 +3,7 @@ import os
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes
 
-TASKS_FILE = "/Users/ta4haa/taskbot/tasks.json"
+TASKS_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "tasks.json")
 
 def load_tasks():
     if not os.path.exists(TASKS_FILE):
